@@ -6,7 +6,9 @@ const settings = {
         bundle: [
             'react-hot-loader/patch',
             './src/frontend/index.js'
-        ]
+        ],
+        js: ['babel-polyfill', "./src/frontend/index.js"],
+        vendor: ['react']
     },
     output: {
         filename: '[name].js',
@@ -25,9 +27,8 @@ const settings = {
                 options: {
                     presets: [
                         ['es2015', {modules: false}],
-                        'stage-2',
-                        'react',
-
+                        'stage-0',
+                        'react'
                     ],
                     plugins: [
                         'transform-node-env-inline',
@@ -56,7 +57,8 @@ const settings = {
                     'postcss-loader' // has separate config, see postcss.config.js nearby
                 ]
             }
-        ]
+        ],
+        loaders: [{test: /\.json$/, loader: 'json-loader'}]
     },
     devServer: {
         contentBase: path.resolve('src/www'),
@@ -65,6 +67,12 @@ const settings = {
         hot: true,
         historyApiFallback: true,
         inline: true
+    },
+    node: {
+        console: true,
+        fs: 'empty',
+        net: 'empty',
+        tls: 'empty'
     },
     plugins: [
         new webpack.HotModuleReplacementPlugin(),

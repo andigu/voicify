@@ -9,7 +9,7 @@ export class Home extends Component {
         console.log(this.props);
         return <Button raised href={encodeQueryData('https://accounts.spotify.com/authorize', {
             client_id: '95555b7f48ea49548c1deb681bfc16f7',
-            response_type: 'code',
+            response_type: 'token',
             redirect_uri: 'http://localhost:8080/spotify_cb'
         })}>
             <svg version="1.0" x="0px" y="0px" viewBox="0 0 26 26" className="icon icons8-Spotify">
