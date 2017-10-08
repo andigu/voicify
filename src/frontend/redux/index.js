@@ -6,7 +6,7 @@ import {composeWithDevTools} from 'redux-devtools-extension';
 import {combineActions, combineReducers, combineSagas} from './utils';
 import {objectMap} from '../lib/operators';
 import {persistReducer, persistStore} from 'redux-persist';
-import storage from 'redux-persist/es/storage';
+import storage from 'redux-persist/lib/storage'
 import createSagaMiddleware from 'redux-saga';
 
 import spotifyRedux from './spotify';
@@ -25,7 +25,7 @@ export const actionCreators = combineActions({
 
 function* rootSaga() {
     yield combineSagas({
-        // [namespaces.spotify]: spotifyRedux.sagas,
+        [namespaces.spotify]: spotifyRedux.sagas,
     }, actionCreators);
 }
 
@@ -35,7 +35,8 @@ export const createStore = () => {
     const ReduxConfig = {
         key: 'root',
         storage,
-        blacklist: [namespaces.router, namespaces.status]
+        blacklist: [namespaces.router],
+        debug: true
     };
 
     const rootReducer = persistReducer(ReduxConfig, combineReducers({

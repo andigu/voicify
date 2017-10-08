@@ -7,7 +7,7 @@ const settings = {
             'react-hot-loader/patch',
             './src/frontend/index.js'
         ],
-        js: ['babel-polyfill', "./src/frontend/index.js"],
+        js: ['babel-polyfill', './src/frontend/index.js'],
         vendor: ['react']
     },
     output: {
