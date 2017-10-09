@@ -1,6 +1,6 @@
 import SpotifyApi from 'spotify-web-api-js';
 
-export const Spotify: SpotifyApi = new SpotifyApi();
+export const Spotify = new SpotifyApi();
 
 /**
  * Pure function that checks if token is valid

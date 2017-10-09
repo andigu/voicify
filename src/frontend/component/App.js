@@ -7,9 +7,10 @@ import {ConnectedRouter} from 'react-router-redux';
 import {SpotifySuccess} from './SpotifySuccess';
 import {PersistGate} from 'redux-persist/lib/integration/react';
 import {ProgressBar} from 'react-toolbox/lib/progress_bar';
-import {MainApp} from './MainApp';
+import {MainApp} from './main/MainApp';
 
 const {store, persistor} = createStore();
+
 export const App = () => (
     <Provider store={store}>
         <PersistGate

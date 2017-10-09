@@ -32,7 +32,8 @@ const settings = {
                     ],
                     plugins: [
                         'transform-node-env-inline',
-                        'transform-decorators-legacy'
+                        'transform-decorators-legacy',
+                        'idx'
                     ],
                     env: {
                         development: {

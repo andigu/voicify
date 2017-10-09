@@ -8,8 +8,10 @@ import {objectMap} from '../lib/operators';
 import {persistReducer, persistStore} from 'redux-persist';
 import storage from 'redux-persist/lib/storage'
 import createSagaMiddleware from 'redux-saga';
+import getStoredState from "redux-persist/es/getStoredState";
 
 import spotifyRedux from './spotify';
+import {Spotify} from '../lib/spotify';
 
 export const namespaces = {
     spotify: 'spotify',
@@ -38,6 +40,9 @@ export const createStore = () => {
         blacklist: [namespaces.router],
         debug: true
     };
+    getStoredState(ReduxConfig).then((state) => {
+        Spotify.setAccessToken(state.spotify.accessToken); // set access token
+    });
 
     const rootReducer = persistReducer(ReduxConfig, combineReducers({
         [namespaces.router]: routerReducer,
