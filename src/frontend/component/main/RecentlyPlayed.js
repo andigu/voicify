@@ -1,35 +1,32 @@
 import React, {Component} from 'react';
 import {List, ListItem, ListSubHeader} from 'react-toolbox/lib/list';
-import {Spotify} from '../../lib/spotify';
-import {connect} from "react-redux";
-import idx from "idx";
-import styled from "styled-components";
+import {connect} from 'react-redux';
+import idx from 'idx';
+import styled from 'styled-components';
+import PropTypes from 'prop-types';
+import {ProgressBar} from 'react-toolbox/lib/progress_bar';
 
 @connect((state) => state)
 export class RecentlyPlayed extends Component {
-    state = {
-        tracks: []
+    static propTypes = {
+        recentlyPlayed: PropTypes.array
     };
-
-    componentDidMount() {
-        Spotify.getMyRecentlyPlayedTracks().then((data) => {
-            this.setState({
-                tracks: data.items
-            });
-        });
-    }
 
     render() {
         const Li = styled(ListItem)`cursor: pointer`;
+        const PbCont = styled.div`width: 100%; height: 80vh; display: flex; align-items: center; justify-content: center`;
         return <List selectable ripple>
             <ListSubHeader caption='Recently Played'/>
-            {this.state.tracks.map((data, i) => {
-                return <Li
-                    key={i}
-                    avatar={idx(data, (data) => data.track.album.images[0].url)}
-                    caption={idx(data, (data) => data.track.name)}
-                    legend={idx(data, (data) => data.track.album.name)}
-                />})}
+            {this.props.recentlyPlayed === null ?
+                <PbCont><ProgressBar mode="indeterminate" type="circular" multicolor/></PbCont> :
+                this.props.recentlyPlayed.map((data, i) => {
+                    return <Li
+                        key={i}
+                        avatar={idx(data, (data) => data.track.album.images[0].url)}
+                        caption={idx(data, (data) => data.track.name)}
+                        legend={idx(data, (data) => data.track.album.name)}
+                    />;
+                })}
 
         </List>;
     }
