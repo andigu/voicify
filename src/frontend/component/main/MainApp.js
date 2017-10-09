@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {RecentlyPlayed} from './RecentlyPlayed';
+import {VoiceRecognition} from './VoiceRecognition';
 
 export class MainApp extends Component {
     render() {
@@ -14,12 +15,14 @@ export class MainApp extends Component {
             ::-webkit-scrollbar-thumb{background-color: #000000;}`;
         const Left = Base.extend`flex: 3; background-color: red;`;
         const Right = Base.extend`flex: 1; height: 100vh; overflow-y: scroll`;
+        const Fab = styled.div`position: absolute; bottom: 20px; right: 20px`;
         return (
             <Container>
                 <Left>
                     <div style={{backgroundColor: 'white', height: 50, width: 50}}/>
                 </Left>
                 <Right><RecentlyPlayed/></Right>
+                <Fab><VoiceRecognition/></Fab>
             </Container>
         );
     }

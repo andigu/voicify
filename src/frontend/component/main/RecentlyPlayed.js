@@ -22,7 +22,7 @@ export class RecentlyPlayed extends Component {
     render() {
         const Li = styled(ListItem)`cursor: pointer`;
         return <List selectable ripple>
-            <ListSubHeader caption='Explore characters'/>
+            <ListSubHeader caption='Recently Played'/>
             {this.state.tracks.map((data, i) => {
                 return <Li
                     key={i}

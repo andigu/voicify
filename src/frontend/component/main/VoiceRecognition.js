@@ -62,10 +62,11 @@ export class VoiceRecognition extends Component {
 
 
     render() {
-        const Icon = styled(FontIcon)`color: red; font-size: 32px; padding-top: 13px`;
+        const Icon = styled(FontIcon)`color: white; font-size: 32px; padding-top: 13px`;
         const AnimatedIcon = styled(Icon)`animation: ${this.zoom} 1s linear infinite`;
+        const Btn = styled(Button)`transform: scale(1.1)`;
         return <div>
-            <Button icon={this.state.active ? <AnimatedIcon value='mic'/> : <Icon value='mic'/>} floating
+            <Btn icon={this.state.active ? <AnimatedIcon value='mic'/> : <Icon value='mic'/>} floating primary
                     onClick={this.activate}/>
         </div>;
     }
