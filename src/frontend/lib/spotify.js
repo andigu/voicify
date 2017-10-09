@@ -19,3 +19,7 @@ export function isValid(accessToken): Promise<?any> {
         return x;
     })
 }
+
+export function isExpired(res) {
+    return JSON.parse(res.response).error.message === 'The access token expired';
+}

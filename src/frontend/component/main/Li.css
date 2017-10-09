@@ -1,0 +1,13 @@
+.item {
+    max-width: 100%;
+}
+
+.itemContentRoot {
+    min-width: 0;
+}
+
+.itemText {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
