@@ -1,6 +1,7 @@
 {
   "name": "spotify-assistant",
   "dependencies": {
+    "annyang": "^2.6.0",
     "artyom.js": "^1.0.6",
     "autobind-decorator": "^2.1.0",
     "axios": "^0.16.2",

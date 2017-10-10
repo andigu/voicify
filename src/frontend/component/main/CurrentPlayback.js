@@ -5,6 +5,18 @@ import idx from 'idx';
 import styled from 'styled-components';
 import {Slider} from 'react-toolbox/lib/slider';
 import {Button, IconButton} from 'react-toolbox/lib/button';
+import _ from "lodash";
+
+function msToText(ms) {
+    if (ms) {
+        const seconds = Math.round(ms / 1000);
+        const minutes = Math.round((seconds - seconds % 60) / 60);
+        const remainingSeconds = seconds % 60;
+        return `${minutes}:${remainingSeconds < 10 ? `0${remainingSeconds}`:remainingSeconds}`;
+    } else {
+        return '';
+    }
+}
 
 export class CurrentPlayback extends Component {
     static propTypes = {
@@ -18,6 +30,7 @@ export class CurrentPlayback extends Component {
         const Card = styled(RCard)`width: 60vh; align-self: center; margin-top: 30px`;
         const RowContainer = styled.div`display: flex; flex-direction: row; justify-content: center; align-items: center;`;
 
+        const P = styled.p`font-family: Roboto,sans-serif`;
         return <div style={{width: '100%', display: 'flex', flexDirection: 'column'}}>
             <Card>
                 <CardTitle
@@ -25,19 +38,18 @@ export class CurrentPlayback extends Component {
                     subtitle={idx(this.props.currentPlayback, (x) => x.item.album.name)}/>
                 <CardMedia image={idx(this.props.currentPlayback, (x) => x.item.album.images[0].url)}
                            aspectRatio="square"/>
-
             </Card>
             <RowContainer>
-                <div style={{flex: 1, textAlign: "right"}}>
-                    <p>Hi</p>
+                <div style={{flex: 1, textAlign: 'right'}}>
+                    <P>{msToText(idx(this.props.currentPlayback, (x) => x.progress_ms))}</P>
                 </div>
                 <Slider disabled
                         style={{flex: 13}}
-                        value={this.props.currentPlayback.progress_ms}
+                        value={_.isNumber(this.props.currentPlayback.progress_ms) ? this.props.currentPlayback.progress_ms : 0}
                         min={0}
                         max={idx(this.props.currentPlayback, (x) => x.item.duration_ms)}/>
-                <div style={{flex:1}}>
-                    <p>Wow</p>
+                <div style={{flex: 1}}>
+                    <P>{msToText(idx(this.props.currentPlayback, (x) => x.item.duration_ms))}</P>
                 </div>
             </RowContainer>
             <RowContainer>

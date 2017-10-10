@@ -5,12 +5,13 @@ import idx from 'idx';
 import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import {ProgressBar} from 'react-toolbox/lib/progress_bar';
-import theme from "./Li.css";
+import theme from './Li.css';
 
 @connect((state) => state)
 export class RecentlyPlayed extends Component {
     static propTypes = {
-        recentlyPlayed: PropTypes.array
+        recentlyPlayed: PropTypes.array,
+        onClick: PropTypes.func
     };
 
     render() {
@@ -21,12 +22,12 @@ export class RecentlyPlayed extends Component {
             {this.props.recentlyPlayed === null ?
                 <PbCont><ProgressBar mode="indeterminate" type="circular" multicolor/></PbCont> :
                 this.props.recentlyPlayed.map((data, i) => {
-                    return <Li
-                        key={i}
-                        theme={theme}
-                        avatar={idx(data, (data) => data.track.album.images[0].url)}
-                        caption={idx(data, (data) => data.track.name)}
-                        legend={idx(data, (data) => data.track.album.name)}/>;
+                    return <Li key={i}
+                               theme={theme}
+                               onClick={() => {this.props.onClick(data)}}
+                               avatar={idx(data, (data) => data.track.album.images[0].url)}
+                               caption={idx(data, (data) => data.track.name)}
+                               legend={idx(data, (data) => data.track.album.name)}/>;
                 })}
 
         </List>;

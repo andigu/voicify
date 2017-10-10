@@ -1,13 +1,19 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {RecentlyPlayed} from './RecentlyPlayed';
-import {VoiceRecognition} from './VoiceRecognition';
 import {isExpired, Spotify} from '../../lib/spotify';
 import {Dialog} from 'react-toolbox/lib/dialog';
 import {SpotifyLoginButton} from '../SpotifyLoginButton';
 import {CurrentPlayback} from './CurrentPlayback';
 import autobind from 'autobind-decorator';
 import {List, ListItem} from 'react-toolbox/lib/list';
+import idx from 'idx';
+
+import annyang from 'annyang';
+import _ from 'lodash';
+
+annyang.start({autoRestart: true, continuous: true});
+annyang.debug(true);
 
 export class MainApp extends Component {
     state = {
@@ -24,6 +30,47 @@ export class MainApp extends Component {
     constructor(props) {
         super(props);
         this.refreshAll();
+        const commandData = {
+            'play *song by *artist': (song, artist) => {
+                Spotify.search(song, ["track"], {artist}).then((song) => {
+                    const songUri = idx(song, (x) => x.tracks.items[0].uri);
+                    if (songUri) Spotify.play({uris: [songUri]}).then(this.refreshAll, this.checkExpired)
+                }, this.checkExpired)
+            },
+            'play *song': (song) => {
+                Spotify.search(song, ["track"]).then((song) => {
+                    const songUri = idx(song, (x) => x.tracks.items[0].uri);
+                    if (songUri) Spotify.play({uris: [songUri]}).then(this.refreshAll, this.checkExpired)
+                }, this.checkExpired)
+            },
+            'resume': () => {
+                this.setPlayState(true);
+                Spotify.play({}).then(() => {}, this.checkExpired)
+            },
+            'pause': () => {
+                this.setPlayState(false);
+                Spotify.pause({}).then(() => {}, this.checkExpired)
+            },
+            'rewind': () => {
+                Spotify.skipToPrevious({}).then(this.refreshAll, this.checkExpired);
+            },
+            'fast forward': () => {
+                Spotify.skipToNext({}).then(this.refreshAll, this.checkExpired);
+            }
+        };
+        const commands = _.mapKeys(commandData, (x, y) => {
+            return 'spotify ' + y;
+        });
+        annyang.addCommands(commands);
+    }
+
+    setPlayState(playing) {
+        this.setState((prev) => ({
+            currentPlayback: {
+                ...prev.currentPlayback,
+                is_playing: playing
+            }
+        }));
     }
 
     componentDidMount() {
@@ -35,7 +82,7 @@ export class MainApp extends Component {
         });
         this.tick = setInterval(() => {
             this.setState((prev) => {
-                if (prev.currentPlayback.is_playing && prev.currentPlayback.progress_ms < prev.currentPlayback.item.duration_ms) {
+                if (idx(prev, (x) => x.currentPlayback.is_playing) && idx(prev, (x) => x.currentPlayback.progress_ms) < idx(prev, (x) => x.currentPlayback.item.duration_ms)) {
                     return {
                         ...prev,
                         currentPlayback: {...prev.currentPlayback, progress_ms: prev.currentPlayback.progress_ms + 1000}
@@ -61,11 +108,7 @@ export class MainApp extends Component {
             this.setState({
                 recentlyPlayed: data.items
             });
-        }, (err) => {
-            if (isExpired(err)) {
-                this.raiseRelogin();
-            }
-        });
+        }, this.checkExpired);
     }
 
     refreshCurrentPlayback() {
@@ -73,11 +116,14 @@ export class MainApp extends Component {
             this.setState({
                 currentPlayback: data
             });
-        }, (err) => {
-            if (isExpired(err)) {
-                this.raiseRelogin();
-            }
-        });
+        }, this.checkExpired);
+    }
+
+    @autobind
+    checkExpired(err) {
+        if (isExpired(err)) {
+            this.raiseRelogin();
+        }
     }
 
     raiseRelogin() {
@@ -98,21 +144,10 @@ export class MainApp extends Component {
         const Left = Base.extend`flex: 1`;
         const Middle = Base.extend`flex:3`;
         const Right = Base.extend`flex:1; height: 100vh; overflow-x: auto`;
-        const Fab = styled.div`position: absolute; bottom: 20px; right: 20px`;
-
-        const closeDialog = () => {
-            this.setState({activeDialog: false});
-        };
         return (
             <Container>
-                <Dialog
-                    actions={[
-                        {label: 'Cancel', onClick: closeDialog}
-                    ]}
-                    active={this.state.activeDialog}
-                    onEscKeyDown={closeDialog}
-                    onOverlayClick={closeDialog}
-                    title='Your Spotify Session has expired'>
+                <Dialog active={this.state.activeDialog}
+                        title='Your Spotify session has expired'>
                     <SpotifyLoginButton text="Login"/>
                 </Dialog>
                 <Left>
@@ -121,7 +156,7 @@ export class MainApp extends Component {
                                   selectable
                                   caption="About"/>
                         <ListItem leftIcon="settings" selectable
-                        caption="Settings"/>
+                                  caption="Settings"/>
                         <ListItem leftIcon="exit_to_app" selectable
                                   caption="Log out"/>
                     </List>
@@ -129,28 +164,25 @@ export class MainApp extends Component {
                 <Middle>
                     <CurrentPlayback currentPlayback={this.state.currentPlayback}
                                      skipToNext={() => {
-                                         Spotify.skipToNext({}).then(this.refreshAll);
+                                         Spotify.skipToNext({}).then(this.refreshAll, this.checkExpired);
                                      }}
                                      skipToPrev={() => {
-                                         Spotify.skipToPrevious({}).then(this.refreshAll);
+                                         Spotify.skipToPrevious({}).then(this.refreshAll, this.checkExpired);
                                      }}
                                      onPlayClick={() => {
                                          if (this.state.currentPlayback.is_playing) {
-                                             Spotify.pause({});
+                                             Spotify.pause({}).then(() => {
+                                             }, this.checkExpired);
                                          } else {
-                                             Spotify.play({});
+                                             Spotify.play({}).then(() => {
+                                             }, this.checkExpired);
                                          }
-                                         this.setState((prev) => ({
-                                             ...prev,
-                                             currentPlayback: {
-                                                 ...prev.currentPlayback,
-                                                 is_playing: !prev.currentPlayback.is_playing
-                                             }
-                                         }));
+                                         this.setPlayState(!this.state.currentPlayback.is_playing);
                                      }}/>
                 </Middle>
-                <Right><RecentlyPlayed recentlyPlayed={this.state.recentlyPlayed}/></Right>
-                <Fab><VoiceRecognition/></Fab>
+                <Right><RecentlyPlayed recentlyPlayed={this.state.recentlyPlayed} onClick={(data) => {
+                    Spotify.play({uris: [data.track.uri]}).then(this.refreshAll, this.checkExpired);
+                }}/></Right>
             </Container>
         );
     }

@@ -2,11 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b5f65fe-7a08-4110-9d9d-e8dbe3b402df" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/App.js" afterPath="$PROJECT_DIR$/src/frontend/component/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/lib/spotify.js" afterPath="$PROJECT_DIR$/src/frontend/lib/spotify.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -28,109 +30,59 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file leaf-file-name="CurrentPlayback.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="CurrentPlayback.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-181">
-              <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+            <state relative-caret-position="341">
+              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
               <folding>
-                <element signature="e#0#39#0" expanded="true" />
-                <marker date="1507591098975" expanded="true" signature="812:820" ph="..." />
-                <marker date="1507591098975" expanded="true" signature="890:1261" ph="..." />
+                <marker date="1507592864566" expanded="true" signature="1232:1240" ph="..." />
+                <marker date="1507592864566" expanded="true" signature="1310:1680" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="RecentlyPlayed.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="558">
-              <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
-              <folding>
-                <element signature="e#0#39#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Li.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/component/main/Li.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="372">
-              <caret line="12" column="1" lean-forward="false" selection-start-line="12" selection-start-column="1" selection-end-line="12" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="App.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/component/App.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MainApp.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="MainApp.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
+            <state relative-caret-position="357">
+              <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="n#!!block;n#refreshRecentlyPlayed#0;n#MainApp#0" expanded="false" />
-                <element signature="n#!!block;n#refreshCurrentPlayback#0;n#MainApp#0" expanded="false" />
-                <marker date="1507591685660" expanded="true" signature="2570:2885" ph="{...}" />
+                <marker date="1507606744527" expanded="true" signature="4326:4641" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VoiceRecognition.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js">
+      <file leaf-file-name="artyom.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/artyom.js/build/artyom.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="68" column="12" lean-forward="false" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-              <folding>
-                <marker date="1507513717757" expanded="true" signature="927:1035" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="spotify-web-api.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/spotify-web-api-js/src/spotify-web-api.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="213">
-              <caret line="1543" column="2" lean-forward="false" selection-start-line="1543" selection-start-column="2" selection-end-line="1543" selection-end-column="2" />
+            <state relative-caret-position="160">
+              <caret line="1012" column="23" lean-forward="false" selection-start-line="1012" selection-start-column="23" selection-end-line="1012" selection-end-column="23" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="package.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/package.json">
+      <file leaf-file-name="artyom.ts" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/node_modules/artyom.js/source/artyom.ts">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="217">
-              <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-              <folding>
-                <marker date="1507511679738" expanded="true" signature="51:145" ph="{&quot;artyom.js&quot;: &quot;^1.0.6&quot;...}" />
-                <marker date="1507511679738" expanded="true" signature="983:1769" ph="{&quot;autoprefixer&quot;: &quot;^7.1.5&quot;...}" />
-              </folding>
+            <state relative-caret-position="227">
+              <caret line="1224" column="0" lean-forward="false" selection-start-line="1224" selection-start-column="0" selection-end-line="1224" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="utils.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/frontend/redux/utils.js">
+      <file leaf-file-name="SpotifyLoginButton.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="279">
-              <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="296">
+              <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
               <folding>
-                <element signature="e#0#51#0" expanded="true" />
+                <marker date="1507593215449" expanded="true" signature="235:305" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -162,6 +114,9 @@
       <find>#ffb160</find>
       <find>hover</find>
       <find>skiptone</find>
+      <find>Spotify.</find>
+      <find>Recognition.</find>
+      <find>setplay</find>
     </findStrings>
     <replaceStrings>
       <replace>#787878</replace>
@@ -209,16 +164,16 @@
         <option value="$PROJECT_DIR$/src/frontend/redux/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/Home.js" />
-        <option value="$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js" />
         <option value="$PROJECT_DIR$/src/frontend/lib/spotify.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/PlayPause.less" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/PlayPause.css" />
-        <option value="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
         <option value="$PROJECT_DIR$/src/frontend/App.css" />
         <option value="$PROJECT_DIR$/src/frontend/component/App.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
       </list>
     </option>
@@ -486,12 +441,12 @@
       <workItem from="1507504706973" duration="18580000" />
       <workItem from="1507579538947" duration="177000" />
       <workItem from="1507579764946" duration="32000" />
-      <workItem from="1507579826769" duration="7792000" />
+      <workItem from="1507579826769" duration="15141000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54220000" />
+    <option name="totallyTimeSpent" value="61569000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -507,8 +462,9 @@
       <window_info id="npm" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32923833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32923833" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26756757" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -522,7 +478,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297491" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -539,7 +494,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/frontend/containers/Devtools.js" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.4.0/core-modules/tty.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-496">
@@ -566,6 +520,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
           <caret line="7" column="1" lean-forward="false" selection-start-line="7" selection-start-column="1" selection-end-line="7" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -602,13 +557,6 @@
     <entry file="file://$PROJECT_DIR$/.stylelintrc" />
     <entry file="file://$PROJECT_DIR$/node_modules/annyang/dist/annyang.min.js" />
     <entry file="file://$PROJECT_DIR$/src/annyang.d.ts" />
-    <entry file="file://$PROJECT_DIR$/node_modules/artyom.js/source/artyom.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6293">
-          <caret line="203" column="18" lean-forward="false" selection-start-line="203" selection-start-column="18" selection-end-line="203" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/Logo.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
@@ -750,13 +698,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="20" column="26" lean-forward="false" selection-start-line="20" selection-start-column="26" selection-end-line="20" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/lib/spotify.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="775">
@@ -776,8 +717,8 @@
         <state relative-caret-position="217">
           <caret line="7" column="0" lean-forward="false" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
           <folding>
-            <marker date="1507511679738" expanded="true" signature="51:145" ph="{&quot;artyom.js&quot;: &quot;^1.0.6&quot;...}" />
-            <marker date="1507511679738" expanded="true" signature="983:1769" ph="{&quot;autoprefixer&quot;: &quot;^7.1.5&quot;...}" />
+            <marker date="1507594289587" expanded="true" signature="51:170" ph="{&quot;artyom.js&quot;: &quot;^1.0.6&quot;...}" />
+            <marker date="1507594289587" expanded="true" signature="1008:1794" ph="{&quot;autoprefixer&quot;: &quot;^7.1.5&quot;...}" />
           </folding>
         </state>
       </provider>
@@ -787,7 +728,7 @@
         <state relative-caret-position="279">
           <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
           <folding>
-            <element signature="e#0#51#0" expanded="true" />
+            <element signature="e#0#51#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -816,16 +757,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="68" column="12" lean-forward="false" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-          <folding>
-            <marker date="1507513717757" expanded="true" signature="927:1035" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/App.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="217">
@@ -844,35 +775,66 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="558">
-          <caret line="18" column="39" lean-forward="true" selection-start-line="18" selection-start-column="39" selection-end-line="18" selection-end-column="39" />
+        <state relative-caret-position="-62">
+          <caret line="10" column="15" lean-forward="false" selection-start-line="10" selection-start-column="15" selection-end-line="10" selection-end-column="15" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#0#39#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="116" column="25" lean-forward="true" selection-start-line="116" selection-start-column="25" selection-end-line="116" selection-end-column="25" />
+        <state relative-caret-position="296">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
           <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="n#!!block;n#refreshRecentlyPlayed#0;n#MainApp#0" expanded="false" />
-            <element signature="n#!!block;n#refreshCurrentPlayback#0;n#MainApp#0" expanded="false" />
-            <marker date="1507591685660" expanded="true" signature="2570:2885" ph="{...}" />
+            <marker date="1507593215449" expanded="true" signature="235:305" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/artyom.js/source/artyom.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="1224" column="0" lean-forward="false" selection-start-line="1224" selection-start-column="0" selection-end-line="1224" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/node_modules/artyom.js/build/artyom.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="1012" column="23" lean-forward="false" selection-start-line="1012" selection-start-column="23" selection-end-line="1012" selection-end-column="23" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-181">
-          <caret line="30" column="59" lean-forward="true" selection-start-line="30" selection-start-column="59" selection-end-line="30" selection-end-column="59" />
+        <state relative-caret-position="341">
+          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+          <folding>
+            <marker date="1507592864566" expanded="true" signature="1232:1240" ph="..." />
+            <marker date="1507592864566" expanded="true" signature="1310:1680" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="16">
+          <caret line="23" column="42" lean-forward="true" selection-start-line="20" selection-start-column="12" selection-end-line="23" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1507591098975" expanded="true" signature="812:820" ph="..." />
-            <marker date="1507591098975" expanded="true" signature="890:1261" ph="..." />
+            <marker date="1507606744527" expanded="true" signature="4326:4641" ph="{...}" />
           </folding>
         </state>
       </provider>
