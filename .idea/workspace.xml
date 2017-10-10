@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b5f65fe-7a08-4110-9d9d-e8dbe3b402df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/App.js" afterPath="$PROJECT_DIR$/src/frontend/component/App.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/Home.js" afterPath="$PROJECT_DIR$/src/frontend/component/Home.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/lib/spotify.js" afterPath="$PROJECT_DIR$/src/frontend/lib/spotify.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -39,17 +42,48 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainApp.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="170" column="126" lean-forward="false" selection-start-line="170" selection-start-column="126" selection-end-line="170" selection-end-column="126" />
+            <state relative-caret-position="150">
+              <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <element signature="e#1227#2553#0" expanded="false" />
-                <element signature="e#4833#5020#0" expanded="false" />
-                <marker date="1507609080494" expanded="true" signature="4172:4487" ph="{...}" />
+                <element signature="e#1269#2595#0" expanded="false" />
+                <marker date="1507610106761" expanded="true" signature="4441:4756" ph="{...}" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="spotify.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/lib/spotify.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="358">
+              <caret line="27" column="77" lean-forward="false" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/frontend/component/App.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="279">
+              <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#26#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/component/Home.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="155">
+              <caret line="12" column="105" lean-forward="false" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -116,6 +150,8 @@
       <find>Recognition.</find>
       <find>setplay</find>
       <find>progress_ms</find>
+      <find>are you su</find>
+      <find>settings</find>
     </findStrings>
     <replaceStrings>
       <replace>#787878</replace>
@@ -163,18 +199,18 @@
         <option value="$PROJECT_DIR$/src/frontend/redux/index.js" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/webpack.config.js" />
-        <option value="$PROJECT_DIR$/src/frontend/component/Home.js" />
-        <option value="$PROJECT_DIR$/src/frontend/lib/spotify.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/PlayPause.less" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/PlayPause.css" />
         <option value="$PROJECT_DIR$/src/frontend/App.css" />
-        <option value="$PROJECT_DIR$/src/frontend/component/App.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/Drawer.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/Home.js" />
+        <option value="$PROJECT_DIR$/src/frontend/lib/spotify.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/App.js" />
       </list>
     </option>
   </component>
@@ -441,12 +477,12 @@
       <workItem from="1507504706973" duration="18580000" />
       <workItem from="1507579538947" duration="177000" />
       <workItem from="1507579764946" duration="32000" />
-      <workItem from="1507579826769" duration="17434000" />
+      <workItem from="1507579826769" duration="18593000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="63862000" />
+    <option name="totallyTimeSpent" value="65021000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -684,20 +720,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/Home.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="8" column="37" lean-forward="false" selection-start-line="8" selection-start-column="37" selection-end-line="8" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/lib/spotify.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="775">
-          <caret line="25" column="0" lean-forward="false" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/react/cjs/react.development.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="5549">
@@ -746,14 +768,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="1543" column="2" lean-forward="false" selection-start-line="1543" selection-start-column="2" selection-end-line="1543" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="7" column="43" lean-forward="true" selection-start-line="7" selection-start-column="43" selection-end-line="7" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -830,15 +844,40 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/Home.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="155">
+          <caret line="12" column="105" lean-forward="false" selection-start-line="12" selection-start-column="105" selection-end-line="12" selection-end-column="105" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/lib/spotify.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="358">
+          <caret line="27" column="77" lean-forward="false" selection-start-line="27" selection-start-column="77" selection-end-line="27" selection-end-column="77" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="170" column="126" lean-forward="false" selection-start-line="170" selection-start-column="126" selection-end-line="170" selection-end-column="126" />
+        <state relative-caret-position="150">
+          <caret line="163" column="0" lean-forward="true" selection-start-line="163" selection-start-column="0" selection-end-line="163" selection-end-column="0" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <element signature="e#1227#2553#0" expanded="false" />
-            <element signature="e#4833#5020#0" expanded="false" />
-            <marker date="1507609080494" expanded="true" signature="4172:4487" ph="{...}" />
+            <element signature="e#1269#2595#0" expanded="false" />
+            <marker date="1507610106761" expanded="true" signature="4441:4756" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="279">
+          <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#26#0" expanded="true" />
           </folding>
         </state>
       </provider>

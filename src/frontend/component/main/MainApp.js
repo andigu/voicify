@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styled from 'styled-components';
 import {RecentlyPlayed} from './RecentlyPlayed';
-import {isExpired, Spotify} from '../../lib/spotify';
+import {isExpired, isInvalid, Spotify} from '../../lib/spotify';
 import {Dialog} from 'react-toolbox/lib/dialog';
 import {SpotifyLoginButton} from '../SpotifyLoginButton';
 import {CurrentPlayback} from './CurrentPlayback';
@@ -11,14 +11,14 @@ import idx from 'idx';
 
 import annyang from 'annyang';
 import _ from 'lodash';
-import {actionDispatcher} from '../../redux/index';
+import {actionDispatcher, namespaces, stateSelector} from '../../redux/index';
 import {Redirect} from 'react-router';
 import {connect} from 'react-redux';
 
 annyang.start({autoRestart: true, continuous: true});
 annyang.debug(true);
 
-@connect(null, actionDispatcher)
+@connect(stateSelector(namespaces.spotify), actionDispatcher)
 export class MainApp extends Component {
     state = {
         activeDialog: false,
@@ -28,7 +28,6 @@ export class MainApp extends Component {
         me: null,
         redirect: false,
         about: false,
-        settings: false,
         logout: false
     };
 
@@ -121,19 +120,22 @@ export class MainApp extends Component {
 
     @autobind
     checkExpired(err) {
-        if (isExpired(err)) {
-            this.raiseRelogin();
+        if (isInvalid(err)) {
+            this.raiseRelogin('Your session is invalid. Please login again.');
+        }
+        else if (isExpired(err)) {
+            this.raiseRelogin('Your session expired. Please log in again.');
         }
     }
 
-    raiseRelogin() {
+    raiseRelogin(message) {
         this.setState({
-            activeDialog: true
+            activeDialog: message
         });
     }
 
     render() {
-        if (this.state.redirect) return <Redirect to={'/'}/>;
+        if (this.state.redirect || this.props.state.spotify.accessToken === null) return <Redirect to={'/'}/>;
         const Container = styled.div`display: flex; flex-direction: row`;
 
         const Base = styled.div`
@@ -146,32 +148,35 @@ export class MainApp extends Component {
         const Middle = Base.extend`flex:3`;
         const Right = Base.extend`flex:1; height: 100vh; overflow-x: auto`;
         const setAllClosed = () => {
-            this.setState({about: false, settings: false, logout: false});
+            this.setState({about: false, logout: false});
         };
         return (
             <Container>
-                <Dialog active={this.state.activeDialog}
+                <Dialog active={_.isString(this.state.activeDialog)}
                         title='Your Spotify session has expired'>
+                    {this.state.activeDialog}
+                    <br/>
+                    <br/>
                     <SpotifyLoginButton text="Login"/>
                 </Dialog>
+                <Dialog title="About" active={this.state.about} onOverlayClick={setAllClosed}
+                        onEscKeyDown={setAllClosed}>
+
+                </Dialog>
+                <Dialog title="Are you sure?"
+                        active={this.state.logout}
+                        onOverlayClick={setAllClosed}
+                        actions={[{label: 'Cancel', onClick: setAllClosed}, {
+                            label: 'Yes',
+                            onClick: () => {
+                                this.props.actions.spotify.setAccessToken(null);
+                                this.setState({redirect: true});
+                            }
+                        }]}
+                        onEscKeyDown={setAllClosed}>
+                    <p>This will log you out.</p>
+                </Dialog>
                 <Left>
-                    <Dialog title="About" active={this.state.about} onOverlayClick={setAllClosed}
-                            onEscKeyDown={setAllClosed}>
-
-                    </Dialog>
-                    <Dialog title="Settings" active={this.state.settings} onOverlayClick={setAllClosed}
-                            onEscKeyDown={setAllClosed}>
-
-                    </Dialog>
-                    <Dialog title="Are you sure?"
-                            active={this.state.logout}
-                            onOverlayClick={setAllClosed}
-                            actions={[{label: 'Cancel', onClick: setAllClosed}, {
-                                label: 'Yes',
-                                onClick: () => {this.props.actions.spotify.setAccessToken(null); this.setState({redirect: true})}
-                            }]}
-                            onEscKeyDown={setAllClosed}/>
-
                     <List>
                         <ListItem leftIcon="info"
                                   selectable
@@ -179,12 +184,6 @@ export class MainApp extends Component {
                                       this.setState({about: true});
                                   }}
                                   caption="About"/>
-                        <ListItem leftIcon="settings"
-                                  selectable
-                                  onClick={() => {
-                                      this.setState({settings: true});
-                                  }}
-                                  caption="Settings"/>
                         <ListItem leftIcon="exit_to_app"
                                   selectable
                                   onClick={() => {
