@@ -11,17 +11,25 @@ import idx from 'idx';
 
 import annyang from 'annyang';
 import _ from 'lodash';
+import {actionDispatcher} from '../../redux/index';
+import {Redirect} from 'react-router';
+import {connect} from 'react-redux';
 
 annyang.start({autoRestart: true, continuous: true});
 annyang.debug(true);
 
+@connect(null, actionDispatcher)
 export class MainApp extends Component {
     state = {
         activeDialog: false,
         currentPlayback: {}, // null will not set off componentwillreceiveprops
         recentlyPlayed: null,
         drawerActive: false,
-        me: null
+        me: null,
+        redirect: false,
+        about: false,
+        settings: false,
+        logout: false
     };
 
     refreshId;
@@ -32,24 +40,26 @@ export class MainApp extends Component {
         this.refreshAll();
         const commandData = {
             'play *song by *artist': (song, artist) => {
-                Spotify.search(song, ["track"], {artist}).then((song) => {
+                Spotify.search(song, ['track'], {artist}).then((song) => {
                     const songUri = idx(song, (x) => x.tracks.items[0].uri);
-                    if (songUri) Spotify.play({uris: [songUri]}).then(this.refreshAll, this.checkExpired)
-                }, this.checkExpired)
+                    if (songUri) Spotify.play({uris: [songUri]}).then(this.refreshAll, this.checkExpired);
+                }, this.checkExpired);
             },
             'play *song': (song) => {
-                Spotify.search(song, ["track"]).then((song) => {
+                Spotify.search(song, ['track']).then((song) => {
                     const songUri = idx(song, (x) => x.tracks.items[0].uri);
-                    if (songUri) Spotify.play({uris: [songUri]}).then(this.refreshAll, this.checkExpired)
-                }, this.checkExpired)
+                    if (songUri) Spotify.play({uris: [songUri]}).then(this.refreshAll, this.checkExpired);
+                }, this.checkExpired);
             },
             'resume': () => {
                 this.setPlayState(true);
-                Spotify.play({}).then(() => {}, this.checkExpired)
+                Spotify.play({}).then(() => {
+                }, this.checkExpired);
             },
             'pause': () => {
                 this.setPlayState(false);
-                Spotify.pause({}).then(() => {}, this.checkExpired)
+                Spotify.pause({}).then(() => {
+                }, this.checkExpired);
             },
             'rewind': () => {
                 Spotify.skipToPrevious({}).then(this.refreshAll, this.checkExpired);
@@ -80,16 +90,6 @@ export class MainApp extends Component {
                 me
             });
         });
-        this.tick = setInterval(() => {
-            this.setState((prev) => {
-                if (idx(prev, (x) => x.currentPlayback.is_playing) && idx(prev, (x) => x.currentPlayback.progress_ms) < idx(prev, (x) => x.currentPlayback.item.duration_ms)) {
-                    return {
-                        ...prev,
-                        currentPlayback: {...prev.currentPlayback, progress_ms: prev.currentPlayback.progress_ms + 1000}
-                    };
-                }
-            });
-        }, 1000);
     }
 
     componentWillUnmount() {
@@ -133,6 +133,7 @@ export class MainApp extends Component {
     }
 
     render() {
+        if (this.state.redirect) return <Redirect to={'/'}/>;
         const Container = styled.div`display: flex; flex-direction: row`;
 
         const Base = styled.div`
@@ -144,6 +145,9 @@ export class MainApp extends Component {
         const Left = Base.extend`flex: 1`;
         const Middle = Base.extend`flex:3`;
         const Right = Base.extend`flex:1; height: 100vh; overflow-x: auto`;
+        const setAllClosed = () => {
+            this.setState({about: false, settings: false, logout: false});
+        };
         return (
             <Container>
                 <Dialog active={this.state.activeDialog}
@@ -151,13 +155,41 @@ export class MainApp extends Component {
                     <SpotifyLoginButton text="Login"/>
                 </Dialog>
                 <Left>
+                    <Dialog title="About" active={this.state.about} onOverlayClick={setAllClosed}
+                            onEscKeyDown={setAllClosed}>
+
+                    </Dialog>
+                    <Dialog title="Settings" active={this.state.settings} onOverlayClick={setAllClosed}
+                            onEscKeyDown={setAllClosed}>
+
+                    </Dialog>
+                    <Dialog title="Are you sure?"
+                            active={this.state.logout}
+                            onOverlayClick={setAllClosed}
+                            actions={[{label: 'Cancel', onClick: setAllClosed}, {
+                                label: 'Yes',
+                                onClick: () => {this.props.actions.spotify.setAccessToken(null); this.setState({redirect: true})}
+                            }]}
+                            onEscKeyDown={setAllClosed}/>
+
                     <List>
                         <ListItem leftIcon="info"
                                   selectable
+                                  onClick={() => {
+                                      this.setState({about: true});
+                                  }}
                                   caption="About"/>
-                        <ListItem leftIcon="settings" selectable
+                        <ListItem leftIcon="settings"
+                                  selectable
+                                  onClick={() => {
+                                      this.setState({settings: true});
+                                  }}
                                   caption="Settings"/>
-                        <ListItem leftIcon="exit_to_app" selectable
+                        <ListItem leftIcon="exit_to_app"
+                                  selectable
+                                  onClick={() => {
+                                      this.setState({logout: true});
+                                  }}
                                   caption="Log out"/>
                     </List>
                 </Left>

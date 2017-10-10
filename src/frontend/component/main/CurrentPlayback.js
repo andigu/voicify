@@ -5,14 +5,14 @@ import idx from 'idx';
 import styled from 'styled-components';
 import {Slider} from 'react-toolbox/lib/slider';
 import {Button, IconButton} from 'react-toolbox/lib/button';
-import _ from "lodash";
+import _ from 'lodash';
 
 function msToText(ms) {
     if (ms) {
         const seconds = Math.round(ms / 1000);
         const minutes = Math.round((seconds - seconds % 60) / 60);
         const remainingSeconds = seconds % 60;
-        return `${minutes}:${remainingSeconds < 10 ? `0${remainingSeconds}`:remainingSeconds}`;
+        return `${minutes}:${remainingSeconds < 10 ? `0${remainingSeconds}` : remainingSeconds}`;
     } else {
         return '';
     }
@@ -25,6 +25,34 @@ export class CurrentPlayback extends Component {
         skipToNext: PropTypes.func,
         skipToPrev: PropTypes.func
     };
+
+    state = {
+        time: idx(this.props.currentPlayback, (x) => x.progress_ms)
+    };
+
+    tick;
+
+    componentWillReceiveProps(next) {
+        this.setState({
+            time: idx(next.currentPlayback, (x) => x.progress_ms)
+        })
+    }
+
+    componentDidMount() {
+        this.tick = setInterval(() => {
+            if (idx(this.props.currentPlayback, (x) => x.is_playing)
+                && idx(this.props.currentPlayback, (x) => x.progress_ms) <
+                idx(this.props.currentPlayback, (x) => x.item.duration_ms)) {
+                this.setState((prev) => ({
+                    time: prev.time + 1000
+                }))
+            }
+        }, 1000);
+    }
+
+    componentWillUnmount() {
+        clearInterval(this.tick);
+    }
 
     render() {
         const Card = styled(RCard)`width: 60vh; align-self: center; margin-top: 30px`;
@@ -41,11 +69,11 @@ export class CurrentPlayback extends Component {
             </Card>
             <RowContainer>
                 <div style={{flex: 1, textAlign: 'right'}}>
-                    <P>{msToText(idx(this.props.currentPlayback, (x) => x.progress_ms))}</P>
+                    <P>{msToText(this.state.time)}</P>
                 </div>
                 <Slider disabled
                         style={{flex: 13}}
-                        value={_.isNumber(this.props.currentPlayback.progress_ms) ? this.props.currentPlayback.progress_ms : 0}
+                        value={_.isNumber(this.state.time) ? this.state.time : 0}
                         min={0}
                         max={idx(this.props.currentPlayback, (x) => x.item.duration_ms)}/>
                 <div style={{flex: 1}}>

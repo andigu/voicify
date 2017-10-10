@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b5f65fe-7a08-4110-9d9d-e8dbe3b402df" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/yarn.lock" afterPath="$PROJECT_DIR$/yarn.lock" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -33,11 +28,12 @@
       <file leaf-file-name="CurrentPlayback.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="341">
-              <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+            <state relative-caret-position="388">
+              <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
               <folding>
-                <marker date="1507592864566" expanded="true" signature="1232:1240" ph="..." />
-                <marker date="1507592864566" expanded="true" signature="1310:1680" ph="..." />
+                <element signature="e#0#39#0" expanded="true" />
+                <marker date="1507608169646" expanded="true" signature="1984:1992" ph="..." />
+                <marker date="1507608169646" expanded="true" signature="2062:2432" ph="..." />
               </folding>
             </state>
           </provider>
@@ -46,11 +42,13 @@
       <file leaf-file-name="MainApp.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+            <state relative-caret-position="140">
+              <caret line="170" column="126" lean-forward="false" selection-start-line="170" selection-start-column="126" selection-end-line="170" selection-end-column="126" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
-                <marker date="1507606744527" expanded="true" signature="4326:4641" ph="{...}" />
+                <element signature="e#1227#2553#0" expanded="false" />
+                <element signature="e#4833#5020#0" expanded="false" />
+                <marker date="1507609080494" expanded="true" signature="4172:4487" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -117,6 +115,7 @@
       <find>Spotify.</find>
       <find>Recognition.</find>
       <find>setplay</find>
+      <find>progress_ms</find>
     </findStrings>
     <replaceStrings>
       <replace>#787878</replace>
@@ -171,9 +170,10 @@
         <option value="$PROJECT_DIR$/src/frontend/App.css" />
         <option value="$PROJECT_DIR$/src/frontend/component/App.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" />
-        <option value="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/main/Drawer.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
       </list>
     </option>
@@ -441,12 +441,12 @@
       <workItem from="1507504706973" duration="18580000" />
       <workItem from="1507579538947" duration="177000" />
       <workItem from="1507579764946" duration="32000" />
-      <workItem from="1507579826769" duration="15141000" />
+      <workItem from="1507579826769" duration="17434000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61569000" />
+    <option name="totallyTimeSpent" value="63862000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -494,13 +494,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/nodejs/8.4.0/core-modules/tty.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-496">
-          <caret line="33" column="2" lean-forward="true" selection-start-line="33" selection-start-column="2" selection-end-line="33" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/node_modules/request/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -809,17 +802,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="341">
-          <caret line="45" column="32" lean-forward="true" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
-          <folding>
-            <marker date="1507592864566" expanded="true" signature="1232:1240" ph="..." />
-            <marker date="1507592864566" expanded="true" signature="1310:1680" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="16">
@@ -828,13 +810,35 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="53" column="29" lean-forward="true" selection-start-line="53" selection-start-column="29" selection-end-line="53" selection-end-column="29" />
+        <state relative-caret-position="388">
+          <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
-            <marker date="1507606744527" expanded="true" signature="4326:4641" ph="{...}" />
+            <marker date="1507608169646" expanded="true" signature="1984:1992" ph="..." />
+            <marker date="1507608169646" expanded="true" signature="2062:2432" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/Drawer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="233">
+          <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="170" column="126" lean-forward="false" selection-start-line="170" selection-start-column="126" selection-end-line="170" selection-end-column="126" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="e#1227#2553#0" expanded="false" />
+            <element signature="e#4833#5020#0" expanded="false" />
+            <marker date="1507609080494" expanded="true" signature="4172:4487" ph="{...}" />
           </folding>
         </state>
       </provider>
