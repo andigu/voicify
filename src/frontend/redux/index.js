@@ -1,5 +1,5 @@
 import 'regenerator-runtime/runtime';
-import {applyMiddleware, bindActionCreators, createStore as reduxCreate} from 'redux';
+import {applyMiddleware, bindActionCreators, createStore as reduxCreate, compose} from 'redux';
 import createHistory from 'history/createBrowserHistory';
 import {routerMiddleware, routerReducer} from 'react-router-redux';
 import {composeWithDevTools} from 'redux-devtools-extension';
@@ -52,7 +52,7 @@ export const createStore = () => {
     const middleware = [routerMiddleware(history), sagaMiddleware];
     const enhancers = [];
     enhancers.push(applyMiddleware(...middleware));
-    const store = reduxCreate(rootReducer, composeWithDevTools(...enhancers));
+    const store = reduxCreate(rootReducer, compose(...enhancers));
     sagaMiddleware.run(rootSaga);
     let persistor = persistStore(store);
     return {store, persistor};
