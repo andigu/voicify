@@ -8,12 +8,12 @@ import {CurrentPlayback} from './CurrentPlayback';
 import autobind from 'autobind-decorator';
 import {List, ListItem} from 'react-toolbox/lib/list';
 import idx from 'idx';
-
 import annyang from 'annyang';
 import _ from 'lodash';
 import {actionDispatcher, namespaces, stateSelector} from '../../redux/index';
 import {Redirect} from 'react-router';
 import {connect} from 'react-redux';
+import {About} from "./About";
 
 annyang.start({autoRestart: true, continuous: true});
 annyang.debug(true);
@@ -161,7 +161,7 @@ export class MainApp extends Component {
                 </Dialog>
                 <Dialog title="About" active={this.state.about} onOverlayClick={setAllClosed}
                         onEscKeyDown={setAllClosed}>
-
+                    <About/>
                 </Dialog>
                 <Dialog title="Are you sure?"
                         active={this.state.logout}
