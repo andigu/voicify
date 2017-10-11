@@ -34,19 +34,12 @@ export const About = () => <div><p>This project was inspired by my adventures in
             <td>Resumes music (if paused)</td>
         </tr>
         <tr>
-            <td><code>Rewind</code></td>
+            <td><code>Spotify rewind</code></td>
             <td>Rewinds to previous song</td>
         </tr>
         <tr>
-            <td><code>Fast forward</code></td>
+            <td><code>Spotify fast forward</code></td>
             <td>Skips to next song</td>
         </tr>
     </table>
 </div>;
-
-// 'play *song by *artist'
-// 'play *song'
-// 'resume'
-// 'pause'
-// 'rewind'
-// 'fast forward'
