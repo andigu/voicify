@@ -13,7 +13,7 @@ const settings = {
     output: {
         filename: '[name].js',
         publicPath: '/',
-        path: path.resolve('build')
+        path: path.resolve('src/www')
     },
     resolve: {
         extensions: ['.js', '.json', '.css']
