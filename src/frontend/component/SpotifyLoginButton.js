@@ -10,7 +10,7 @@ export const SpotifyLoginButton = ({text}) => {
     return <Button raised href={encodeQueryData('https://accounts.spotify.com/authorize', {
         client_id: '95555b7f48ea49548c1deb681bfc16f7',
         response_type: 'token',
-        redirect_uri: 'http://localhost:8080/spotify_cb'
+        redirect_uri: 'https://safe-stream-27476.herokuapp.com/spotify_cb'
     })}>
         <svg version="1.0" x="0px" y="0px" viewBox="0 0 26 26">
             <g id="surface1">
