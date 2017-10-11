@@ -2,8 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b5f65fe-7a08-4110-9d9d-e8dbe3b402df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/App.css" afterPath="$PROJECT_DIR$/src/frontend/component/App.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/Home.js" afterPath="$PROJECT_DIR$/src/frontend/component/Home.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/SpotifySuccess.js" afterPath="$PROJECT_DIR$/src/frontend/component/SpotifySuccess.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -78,8 +79,8 @@
       <file leaf-file-name="Home.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/Home.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="295">
-              <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+            <state relative-caret-position="202">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
               <folding>
                 <element signature="e#0#39#0" expanded="true" />
               </folding>
@@ -87,11 +88,33 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="App.css" pinned="false" current-in-tab="true">
+      <file leaf-file-name="SpotifySuccess.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifySuccess.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="326">
+              <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+              <folding>
+                <element signature="e#0#39#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SpotifySuccess.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifySuccess.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="388">
+              <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="App.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/App.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+            <state relative-caret-position="171">
+              <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
               <folding />
             </state>
           </provider>
@@ -102,16 +125,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="31372">
               <caret line="1012" column="23" lean-forward="false" selection-start-line="1012" selection-start-column="23" selection-end-line="1012" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="artyom.ts" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/node_modules/artyom.js/source/artyom.ts">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="37944">
-              <caret line="1224" column="0" lean-forward="false" selection-start-line="1224" selection-start-column="0" selection-end-line="1224" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -195,7 +208,6 @@
         <option value="$PROJECT_DIR$/src/index.js" />
         <option value="$PROJECT_DIR$/src/frontend/lib/operators.js" />
         <option value="$PROJECT_DIR$/src/frontend/redux/spotify.js" />
-        <option value="$PROJECT_DIR$/src/frontend/component/SpotifySuccess.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/MainApp.css" />
         <option value="$PROJECT_DIR$/.eslintrc" />
         <option value="$PROJECT_DIR$/.stylelintrc" />
@@ -220,6 +232,8 @@
         <option value="$PROJECT_DIR$/src/frontend/component/App.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/Home.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/App.css" />
+        <option value="$PROJECT_DIR$/src/frontend/component/SpotifySuccess.css" />
+        <option value="$PROJECT_DIR$/src/frontend/component/SpotifySuccess.js" />
       </list>
     </option>
   </component>
@@ -488,12 +502,12 @@
       <workItem from="1507579764946" duration="32000" />
       <workItem from="1507579826769" duration="19570000" />
       <workItem from="1507658393873" duration="1192000" />
-      <workItem from="1507684613199" duration="1344000" />
+      <workItem from="1507684613199" duration="1937000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="68534000" />
+    <option name="totallyTimeSpent" value="69127000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-11" y="-11" width="1942" height="1042" extended-state="6" />
@@ -541,7 +555,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/index.js" />
     <entry file="file://$PROJECT_DIR$/node_modules/redux/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="257">
@@ -593,13 +606,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="62">
           <caret line="2" column="19" lean-forward="false" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifySuccess.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="36" column="19" lean-forward="false" selection-start-line="36" selection-start-column="19" selection-end-line="36" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -843,21 +849,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/App.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="23" column="14" lean-forward="true" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/Home.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="295">
-          <caret line="15" column="48" lean-forward="false" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+        <state relative-caret-position="202">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/App.css">
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifySuccess.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="15" column="20" lean-forward="false" selection-start-line="15" selection-start-column="20" selection-end-line="15" selection-end-column="20" />
+        <state relative-caret-position="388">
+          <caret line="16" column="18" lean-forward="false" selection-start-line="16" selection-start-column="18" selection-end-line="16" selection-end-column="18" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/SpotifySuccess.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="326">
+          <caret line="31" column="17" lean-forward="false" selection-start-line="31" selection-start-column="17" selection-end-line="31" selection-end-column="17" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

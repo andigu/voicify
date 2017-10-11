@@ -14,7 +14,7 @@ export class Home extends Component {
             return <div className={styles.container}>
                 <h1 className={styles.header}>Voicify.</h1>
                 <div className={styles.loginbtn}>
-                <SpotifyLoginButton />
+                <SpotifyLoginButton text={"Get started now"}/>
                 </div>
             </div>;
         }
