@@ -111,7 +111,7 @@ export class MainApp extends Component {
     }
 
     refreshCurrentPlayback() {
-        Spotify.getMyCurrentPlayingTrack().then((data) => {
+        Spotify.getMyCurrentPlaybackState().then((data) => {
             this.setState({
                 currentPlayback: data
             });
