@@ -41,8 +41,7 @@ export class CurrentPlayback extends Component {
     componentDidMount() {
         this.tick = setInterval(() => {
             if (idx(this.props.currentPlayback, (x) => x.is_playing)
-                && idx(this.props.currentPlayback, (x) => x.progress_ms) <
-                idx(this.props.currentPlayback, (x) => x.item.duration_ms)) {
+                && this.state.time + 1000 < idx(this.props.currentPlayback, (x) => x.item.duration_ms)) {
                 this.setState((prev) => ({
                     time: prev.time + 1000
                 }))

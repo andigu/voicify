@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1b5f65fe-7a08-4110-9d9d-e8dbe3b402df" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" afterPath="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,21 +37,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CurrentPlayback.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="CurrentPlayback.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1060">
-              <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
+            <state relative-caret-position="409">
+              <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainApp.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="MainApp.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="208">
-              <caret line="113" column="31" lean-forward="false" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
+            <state relative-caret-position="177">
+              <caret line="112" column="30" lean-forward="true" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
               <folding>
                 <marker date="1507822371820" expanded="true" signature="4472:4787" ph="{...}" />
               </folding>
@@ -202,7 +203,6 @@
         <option value="$PROJECT_DIR$/src/frontend/App.css" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/RecentlyPlayed.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/VoiceRecognition.js" />
-        <option value="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/Drawer.js" />
         <option value="$PROJECT_DIR$/src/frontend/lib/spotify.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/App.js" />
@@ -219,6 +219,7 @@
         <option value="$PROJECT_DIR$/src/frontend/component/main/About.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/SpotifyLoginButton.js" />
         <option value="$PROJECT_DIR$/src/frontend/component/main/MainApp.js" />
+        <option value="$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js" />
       </list>
     </option>
   </component>
@@ -498,12 +499,12 @@
       <workItem from="1507725892487" duration="395000" />
       <workItem from="1507751142827" duration="2296000" />
       <workItem from="1507811361568" duration="11000" />
-      <workItem from="1507821819418" duration="615000" />
+      <workItem from="1507821819418" duration="831000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="78611000" />
+    <option name="totallyTimeSpent" value="78827000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -880,21 +881,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1060">
-          <caret line="53" column="33" lean-forward="false" selection-start-line="53" selection-start-column="33" selection-end-line="53" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/frontend/component/main/MainApp.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="113" column="31" lean-forward="false" selection-start-line="113" selection-start-column="31" selection-end-line="113" selection-end-column="31" />
+        <state relative-caret-position="177">
+          <caret line="112" column="30" lean-forward="true" selection-start-line="112" selection-start-column="30" selection-end-line="112" selection-end-column="30" />
           <folding>
             <marker date="1507822371820" expanded="true" signature="4472:4787" ph="{...}" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/frontend/component/main/CurrentPlayback.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="409">
+          <caret line="49" column="5" lean-forward="true" selection-start-line="49" selection-start-column="5" selection-end-line="49" selection-end-column="5" />
+          <folding />
         </state>
       </provider>
     </entry>
