@@ -32,11 +32,9 @@ export class MainApp extends Component {
     };
 
     refreshId;
-    tick;
 
     constructor(props) {
         super(props);
-        this.refreshAll();
         const commandData = {
             'play *song by *artist': (song, artist) => {
                 Spotify.search(song, ['track'], {artist}).then((song) => {
@@ -83,6 +81,7 @@ export class MainApp extends Component {
     }
 
     componentDidMount() {
+        this.refreshAll();
         this.refreshId = setInterval(this.refreshAll, 10000);
         Spotify.getMe().then((me) => {
             this.setState({
@@ -93,7 +92,6 @@ export class MainApp extends Component {
 
     componentWillUnmount() {
         clearInterval(this.refreshId);
-        clearInterval(this.tick);
     }
 
     @autobind
