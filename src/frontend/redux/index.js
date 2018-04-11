@@ -1,14 +1,13 @@
 import 'regenerator-runtime/runtime';
-import {applyMiddleware, bindActionCreators, createStore as reduxCreate, compose} from 'redux';
+import {applyMiddleware, bindActionCreators, compose, createStore as reduxCreate} from 'redux';
 import createHistory from 'history/createBrowserHistory';
 import {routerMiddleware, routerReducer} from 'react-router-redux';
-import {composeWithDevTools} from 'redux-devtools-extension';
 import {combineActions, combineReducers, combineSagas} from './utils';
 import {objectMap} from '../lib/operators';
 import {persistReducer, persistStore} from 'redux-persist';
-import storage from 'redux-persist/lib/storage'
+import storage from 'redux-persist/lib/storage';
 import createSagaMiddleware from 'redux-saga';
-import getStoredState from "redux-persist/es/getStoredState";
+import getStoredState from 'redux-persist/es/getStoredState';
 
 import spotifyRedux from './spotify';
 import {Spotify} from '../lib/spotify';
@@ -27,7 +26,7 @@ export const actionCreators = combineActions({
 
 function* rootSaga() {
     yield combineSagas({
-        [namespaces.spotify]: spotifyRedux.sagas,
+        [namespaces.spotify]: spotifyRedux.sagas
     }, actionCreators);
 }
 

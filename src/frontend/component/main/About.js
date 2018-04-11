@@ -26,10 +26,6 @@ export const About = () => <div><p>This project was inspired by my adventures in
             <td>Pauses music</td>
         </tr>
         <tr>
-            <td><code>Spotify pause</code></td>
-            <td>Pauses music</td>
-        </tr>
-        <tr>
             <td><code>Spotify resume</code></td>
             <td>Resumes music (if paused)</td>
         </tr>
